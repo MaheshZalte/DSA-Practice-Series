@@ -123,6 +123,119 @@ public class HollowRectangle {
     }
 
 
+    public static  void butterfly(int n){
+        for(int i = 1 ; i <= n ; i++){
+            for(int j = 1 ; j <= i ; j++){
+                System.out.print("* ");
+            }
+
+            for(int j = 1 ; j <= 2*(n-i) ; j++){
+                System.out.print("  ");
+            }
+
+            for(int j = 1 ; j<= i ; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+        for(int i = n ; i >= 1 ; i--){
+            for(int j = 1 ; j <= i ; j++){
+                System.out.print("* ");
+            }
+
+            for(int j = 1 ; j <= 2*(n-i) ; j++){
+                System.out.print("  ");
+            }
+
+            for(int j = 1 ; j<= i ; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+    }
+
+
+    public static void solidRohmbas(int n){
+        for(int i = 1 ; i <= n ; i++){
+            for(int j = 1 ; j <= n-i ; j++){
+                System.out.print("  ");
+            }
+            for(int j = 1 ; j <= n ; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+
+    public static void hollowRohmbas(int n){
+        for(int i = 1 ; i <= n ; i++){
+            for(int j = 1 ; j <= n-i ; j++){
+                System.out.print("  ");
+            }
+
+            for(int j = 1 ; j <= n ; j++){
+                if(i == 1 || i == n || j == 1 || j==n){
+                    System.out.print("* ");
+                }else{
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+//
+//
+//
+
+    public static void diamond(int n){
+        for(int i = 1 ; i <= n ; i++){
+            for(int j = n-i ; j >= 1 ; j-- ){
+                System.out.print("  ");
+            }
+            for(int j = 1 ; j <= 2*i-1 ; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        for(int i = n-1 ; i >= 1 ; i--){
+            for(int j = n-i ; j >= 1 ; j-- ){
+                System.out.print("  ");
+            }
+            for(int j = 1 ; j <= 2*i-1 ; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void Diamond(int n){
+        for(int i = 1 ; i <= n ; i++){
+            for(int j = n-i ; j >= 1 ; j--){
+                System.out.print("  ");
+            }
+            for(int j = 1 ; j <= 2*i-1 ; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+        for(int i = n-1 ; i >= 1 ; i--){
+            for(int j = n-i ; j >= 1 ; j--){
+                System.out.print("  ");
+            }
+            for(int j = 1 ; j <= 2*i-1 ; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+
+
     public static void main(String[] args) {
         // hollowRectangle();
 
@@ -134,7 +247,17 @@ public class HollowRectangle {
 
         // PiramidZeroOne(7);
 
-        ButterFly(8);
+        // ButterFly(8);
+
+        // butterfly(5);
+
+        // solidRohmbas(5);
+
+        // hollowRohmbas(7);
+
+        // diamond(5);
+
+        Diamond(4);
 
     }
 }
