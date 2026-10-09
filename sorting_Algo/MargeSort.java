@@ -32,12 +32,16 @@ public class MargeSort{
             right++;
         }
 
+        
         for(int i = low; i <= high; i++){
     arr.set(i, temp.get(i - low));
 }
     }
+
+
     
     public static void main(String[] args) {
+
 
         ArrayList<Integer> al = new ArrayList<>(List.of(9, 8, 7, 6, 5, 4, 3, 2, 1));
 
